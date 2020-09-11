@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Movies(models.Model):
-    movieID = models.IntegerField(primary_key=True, unique=False)
+    movieID = models.CharField(primary_key=True, unique=False, max_length=9)
     title = models.CharField(max_length=200)
     release_year = models.IntegerField()
     elo = models.FloatField(default=1000)
