@@ -2,19 +2,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Movie Smash</title>
 </head>
-<table>
-<tr>
-  <th>MovieID</th>
-  <th>Title</th>
-  <th>Release</th>
-  <th>Elo</th>
-</tr>
-{% for q in query_results %}
-<tr>
-  <td>{{ q.movieID }}</td>
-  <td>{{ q.title }}</td>
-  <td>{{ q.release_year }}</td>
-  <td>{{ q.elo }}</td>
-</tr>
-{% endfor %}
-</table>
+<div class="container-fluid">
+	<div class="row" align="center">
+		<div class="col-md-12" style="background-color: darkred">
+            <h1 style="color: white">MOVIE SMASH</h1>
+		</div>
+	</div>
+	<div class="row" align="center" style="padding-top: 500px">
+		<div class="col-md-4 center-block">
+            <ul style="list-style-type: none">
+                <li>{{ m1.title }}</li>
+                <li>{{ m1.release_year }}</li>
+            </ul>
+        </div>
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+            <ul style="list-style-type: none">
+                <li>{{ m2.title }}</li>
+                <li>{{ m2.release_year }}</li>
+            </ul>
+		</div>
+	</div>
+</div>
+
