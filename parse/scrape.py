@@ -1,6 +1,6 @@
-import requests
-from bs4 import BeautifulSoup
+from selenium import webdriver
 import sqlite3
+
 
 database = 'C:/Users/Frankie/PycharmProjects/Django-Website/db.sqlite3'
 
@@ -34,34 +34,27 @@ def url_for_titles(titles, conn):
     for title in titles:
         try:
             cursor = conn.cursor()
-            sql = "UPDATE movie_smash_movies SET image_url = '{url}' WHERE movieID = '{id}'".format(url='url working',
+            sql = "UPDATE movie_smash_movies SET image_url = '{url}' WHERE movieID = '{id}'".format(url=get_url_by_title(title[1]),
                                                                                                     id=title[0])
             cursor.execute(sql)
             conn.commit()
         except Exception as d:
             print(d)
 
-
-
-
-
-
 def get_url_by_title(title):
-    url = ""
-    # Query
-    google_url = "https://www.google.co.in/search?q=" + query + "&source=lnms&tbm=isch"
-    result = requests.get(url)
-
-    # if successful parse the download into a BeautifulSoup object, which allows easy manipulation
-    if result.status_code == 200:
-        soup = BeautifulSoup(result.content, "html.parser")
-
-    # find img class
-    img = soup.find('table', {'class': 'wikitable sortable'})
-    return url
-
-
-
+    url = "https://www.google.co.in/search?q=" + title + "&source=lnms&tbm=isch"
+    browser = webdriver.Chrome('C:/Users/Frankie/ChromeDriver/chromedriver.exe')
+    browser.get(url)
+    header = {
+        'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"}
+    for x in browser.find_elements_by_xpath('//img[contains(@class,"rg_i Q4LuWd")]'):
+        source = x.get_attribute('src')
+        if('https' not in x.get_attribute('src')):
+            continue
+        else:
+            print("Title: {title} Source: {s}".format(title=title, s=source))
+            return source
+    browser.close()
 
 
 def main():
@@ -71,6 +64,7 @@ def main():
     # Getting all titles along with their movieID as this will be needed when inserting back into the database
     titles = get_titles(conn)
     url_for_titles(titles, conn)
+
 
 
 if __name__ == '__main__':
