@@ -1,5 +1,4 @@
 import csv
-
 from django.shortcuts import render
 from .models import Movies
 import random
@@ -15,6 +14,6 @@ def index(request):
 
     # Display movies on the index page
     query_results = Movies.objects.all()
-    m1 = query_results[random.randint(0, 500)]
-    m2 = query_results[random.randint(0, 500)]
+    m1 = query_results[random.randint(0, 100)]
+    m2 = query_results[random.randint(0, 100)]
     return render(request, 'index.html', {'m1': m1, 'm2': m2})

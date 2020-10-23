@@ -1,28 +1,40 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>Movie Smash</title>
 </head>
+<body>
+<div class="container-fluid" style="padding-left: 0; padding-right: 0; text-align: center">
+	<nav class="navbar navbar-expand-lg fixed-top" style="background-color: darkred; ">
+      <div class="container-fluid">
+        <a href="" style="color: white; font-size: 250%">MOVIE SMASH</a>
+      </div>
+    </nav>
+</div>
+<div class="container-fluid" style="text-align: center">
+    <h1>Which movie do you think is better?</h1>
+</div>
 <div class="container-fluid">
-	<div class="row" align="center">
-		<div class="col-md-12" style="background-color: darkred">
-            <h1 style="color: white">MOVIE SMASH</h1>
-		</div>
-	</div>
-	<div class="row" align="center" style="padding-top: 500px">
-		<div class="col-md-4 center-block">
-            <ul style="list-style-type: none">
+    <div class="row" align="center" style="padding-top: 100px">
+		<div class="col-md-4 col-sm-5 col-xs-5">
+            <img src="{{ m1.image_url }}" style="height: auto; width: 50%">
+            <ul style="list-style-type: none; padding-top: 15px">
                 <li>{{ m1.title }}</li>
                 <li>{{ m1.release_year }}</li>
             </ul>
         </div>
-		<div class="col-md-4">
+		<div class="col-md-4 col-sm-2 col-xs-2">
+            <h1 style="font-size: 3vw; font-weight: bold; padding-top: 50px; padding-bottom: 50px">OR</h1>
 		</div>
-		<div class="col-md-4">
-            <ul style="list-style-type: none">
+		<div class="col-md-4 col-sm-5 col-xs-5" >
+            <img src="{{ m2.image_url }}" style="height: auto; width: 50%">
+            <ul style="list-style-type: none; padding-left: 0; padding-top: 15px">
                 <li>{{ m2.title }}</li>
                 <li>{{ m2.release_year }}</li>
             </ul>
 		</div>
 	</div>
 </div>
-
+</body>
+</html>
