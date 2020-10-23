@@ -1,5 +1,8 @@
+import urllib
+import urllib.request
 from selenium import webdriver
 import sqlite3
+
 
 
 database = 'C:/Users/Frankie/PycharmProjects/Django-Website/db.sqlite3'
@@ -43,17 +46,22 @@ def url_for_titles(titles, conn):
 
 def get_url_by_title(title):
     url = "https://www.google.co.in/search?q=" + title + "&source=lnms&tbm=isch"
-    browser = webdriver.Chrome('C:/Users/Frankie/ChromeDriver/chromedriver.exe')
+    browser = webdriver.Chrome('chromedriver.exe')
     browser.get(url)
     header = {
         'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36"}
+
+    for _ in range(500):
+        browser.execute_script("window.scrollBy(0,10000)")
+
     for x in browser.find_elements_by_xpath('//img[contains(@class,"rg_i Q4LuWd")]'):
         source = x.get_attribute('src')
-        if('https' not in x.get_attribute('src')):
-            continue
-        else:
-            print("Title: {title} Source: {s}".format(title=title, s=source))
-            return source
+        try:
+            if('https' in source):
+                print("Title: {title} Source: {s}".format(title=title, s=source))
+                return source
+        except:
+            None
     browser.close()
 
 
