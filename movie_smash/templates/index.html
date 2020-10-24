@@ -5,6 +5,21 @@
     <title>Movie Smash</title>
 </head>
 <body>
+<script>
+    function movieSelected(id_1, id_2){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                location.reload()
+            }
+        };
+        xhttp.open("POST", "/edit_rankings/", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send(id_1+","+id_2);
+    }
+</script>
+
+
 <div class="container-fluid" style="padding-left: 0; padding-right: 0; text-align: center">
 	<nav class="navbar navbar-expand-lg fixed-top" style="background-color: darkred; ">
       <div class="container-fluid">
@@ -14,11 +29,12 @@
 </div>
 <div class="container-fluid" style="text-align: center">
     <h1>Which movie do you think is better?</h1>
+    <h2><- Click the image -></h2>
 </div>
-<div class="container-fluid">
+    <div class="container-fluid">
     <div class="row" align="center" style="padding-top: 100px">
 		<div class="col-md-4 col-sm-5 col-xs-5">
-            <img src="{{ m1.image_url }}" style="height: auto; width: 50%">
+            <img class="img-responsive image1" src="{{ m1.image_url }}" style="height: auto; width: 50%" id="{{ m1.movieID }}" name="{{ m2.movieID }}" onclick="movieSelected(id, name)">
             <ul style="list-style-type: none; padding-top: 15px">
                 <li>{{ m1.title }}</li>
                 <li>{{ m1.release_year }}</li>
@@ -28,7 +44,7 @@
             <h1 style="font-size: 3vw; font-weight: bold; padding-top: 50px; padding-bottom: 50px">OR</h1>
 		</div>
 		<div class="col-md-4 col-sm-5 col-xs-5" >
-            <img src="{{ m2.image_url }}" style="height: auto; width: 50%">
+            <img class="img-responsive" src="{{ m2.image_url }}" style="height: auto; width: 50%" id="{{ m2.movieID }}" name="{{ m1.movieID }}" onclick="movieSelected(id, name)">
             <ul style="list-style-type: none; padding-left: 0; padding-top: 15px">
                 <li>{{ m2.title }}</li>
                 <li>{{ m2.release_year }}</li>

@@ -1,5 +1,5 @@
 from django.db import models
-
+from django import forms
 # Create your models here.
 class Movies(models.Model):
     movieID = models.CharField(primary_key=True, unique=False, max_length=9)
@@ -11,4 +11,5 @@ class Movies(models.Model):
     def __str__(self):
         return self.title
 
-
+class MovieSmashed(models.Model):
+    print()
