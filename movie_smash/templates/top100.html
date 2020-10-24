@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="UTF-8">
 <head>
-    <meta charset="UTF-8">
-    <title>Top 100</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>#
+    <title>Movie Rankings</title>
 </head>
 <body>
-<h1>Hello world</h1>
+<script>
+    $(document).ready(function() {
+    $('#movie_smash').DataTable( {
+        "order":[2, 'asc'],
+    } );
+} );
+</script>
+
+<div class="container-fluid" style="padding-left: 0; padding-right: 0; text-align: center">
+	<nav class="navbar navbar-expand-lg fixed-top" style="background-color: darkred; ">
+      <div class="container-fluid">
+        <a href="" style="color: white; font-size: 250%">MOVIE SMASH</a>
+      </div>
+    </nav>
+</div>
+
+<div class="container-fluid" align="center">
+    <table id="movie_smash" class="display" width="50%" style="font-size: 2vw">
+        <tr>
+          <th class="th-sm" style="padding:0 15px 0 15px;">Title</th>
+          <th class="th-sm" style="padding:0 15px 0 15px;">Release</th>
+          <th class="th-sm" style="padding:0 15px 0 15px;">Elo</th>
+        </tr>
+        {% for q in qr %}
+        <tr>
+          <td style="padding:0 15px 0 15px;">{{ q.title }}</td>
+          <td style="padding:0 15px 0 15px;">{{ q.release_year }}</td>
+          <td style="padding:0 15px 0 15px;">{{ q.elo }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
 </body>
 </html>

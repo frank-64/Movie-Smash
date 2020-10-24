@@ -1,5 +1,6 @@
 import csv
 import math
+import sqlite3
 
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -7,9 +8,11 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Movies
 import random
 
+db_file = 'C:/Users/Frankie/PycharmProjects/Django-Website/db.sqlite3'
 
 def top100(request):
-    return render(request, 'top100.html')
+    query_results = Movies.objects.all()
+    return render(request, 'top100.html', {'qr':query_results})
 
 def calculate_elo(r1, r2):
     # Implement elo algorithm for movies 1 and 2
@@ -41,6 +44,9 @@ def edit_rankings(request):
             movie2.save()
         except Movies.DoesNotExist:
             print("MovieID not found")
+        conn = sqlite3.connect(db_file)
+        cur = conn.cursor()
+        cur.execute("")
     return HttpResponse(None)
 
 
