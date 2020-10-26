@@ -1,7 +1,17 @@
-#Commits from after the git issue
-(1) Sorry this should be multiple commits
-(2) Parsed all the movies from movies.csv into the sqlite3 database after getting continuous errors which were due to the parse code being in the wrong area. Even though this does not seem correct, after the code was executed from the view, instead of it's own parse.py, the fault was fixed.
-(2)Attempted to show all the movies in the sqlite3 database on index.html
- - This required me to store all the Model objects from the Movies model and store them in query_results.
- - Create a HTML table which use embedded python along with the context from query_results to get each attribute from the table and loop through each row.
- - Then use render to combine the index.html template with the table and the embedded Python tags to return a HTML response.
+#Movie Smash - Django web application
+
+##What I used
+* Web scraping for images
+* Apache on linux to host the server so it could be accessed over the internet
+* Mathematical algorithm for the elo ranking system
+* Database to store the movie information
+* CSV to parse the data from a csv file into the SQLite3 database
+* HTML and JS to present the website
+* AJAX on the index.html page to return the users results to the edit_rankings view
+##What I have learned
+* Use small data sets while in development of a project
+* There is often a library for what you are trying to do (save yourself time if possible) give django example where order_by would have saved me 3+ hours talk about datatables
+* I need to make my commits more isolated and follow a set format
+* Update readme more frequently
+#Things i could have done better
+* Reading the AJAX post in the edit_rankings view was very clunky but It took me awhile to get working so i settled for the current method.

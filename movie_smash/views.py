@@ -11,7 +11,7 @@ import random
 db_file = 'C:/Users/Frankie/PycharmProjects/Django-Website/db.sqlite3'
 
 def top100(request):
-    query_results = Movies.objects.all()
+    query_results = Movies.objects.all().order_by('-elo')
     return render(request, 'top100.html', {'qr':query_results})
 
 def calculate_elo(r1, r2):

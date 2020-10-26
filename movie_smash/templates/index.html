@@ -17,6 +17,13 @@
         xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhttp.send(id_1+","+id_2);
     }
+    function enlarge(id) {
+        document.getElementById(id).style.width = "61%";
+    }
+    function shrink(id) {
+        document.getElementById(id).style.width = "60%";
+    }
+
 </script>
 
 
@@ -29,28 +36,32 @@
 </div>
 <div class="container-fluid" style="text-align: center">
     <h1>Which movie do you think is better?</h1>
-    <h2><- Click the image -></h2>
+    <h3>Click the image</h3>
 </div>
     <div class="container-fluid">
-    <div class="row" align="center" style="padding-top: 100px">
+    <div class="row" align="center" style="padding-top: 50px">
 		<div class="col-md-4 col-sm-5 col-xs-5">
-            <img class="img-responsive image1" src="{{ m1.image_url }}" style="height: auto; width: 50%" id="{{ m1.movieID }}" name="{{ m2.movieID }}" onclick="movieSelected(id, name)">
-            <ul style="list-style-type: none;padding-left: 0; padding-top: 15px">
+            <img class="img-responsive image1" src="{{ m1.image_url }}" style="height: auto; width: 60%"
+                 id="{{ m1.movieID }}" name="{{ m2.movieID }}" onclick="movieSelected(id, name)" onmouseover="enlarge(id)" onmouseout="shrink(id)">
+            <ul style="list-style-type: none;padding-left: 0; padding-top: 15px;font-size: 1.5vw">
                 <li>{{ m1.title }}</li>
                 <li>{{ m1.release_year }}</li>
             </ul>
         </div>
 		<div class="col-md-4 col-sm-2 col-xs-2">
             <h1 style="font-size: 3vw; font-weight: bold; padding-top: 50px; padding-bottom: 50px">OR</h1>
+            <br>
+            <br>
 		</div>
 		<div class="col-md-4 col-sm-5 col-xs-5" >
-            <img class="img-responsive" src="{{ m2.image_url }}" style="height: auto; width: 50%" id="{{ m2.movieID }}" name="{{ m1.movieID }}" onclick="movieSelected(id, name)">
-            <ul style="list-style-type: none; padding-left: 0; padding-top: 15px">
+            <img class="img-responsive" src="{{ m2.image_url }}" style="height: auto; width: 60%"
+                 id="{{ m2.movieID }}" name="{{ m1.movieID }}" onclick="movieSelected(id, name)" onmouseover="enlarge(id)" onmouseout="shrink(id)">
+            <ul style="list-style-type: none; padding-left: 0; padding-top: 15px; font-size: 1.5vw">
                 <li>{{ m2.title }}</li>
                 <li>{{ m2.release_year }}</li>
             </ul>
 		</div>
-	</div>
+    </div>
 </div>
 </body>
 </html>
