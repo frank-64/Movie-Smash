@@ -25,7 +25,7 @@ SECRET_KEY = '1q0fb98yerhj5u-5v631z*)vw#7i45ewznz9ytpftk6*d$7@ul'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['82.37.39.79', '127.0.0.1']
+ALLOWED_HOSTS = ['167.172.49.69', 'fcprojects.uk', 'localhost']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'movie_smash.apps.HelloWorldConfig'
+    'movie_smash.apps.MovieSmashConfig'
 ]
 
 MIDDLEWARE = [

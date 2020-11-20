@@ -44,9 +44,6 @@ def edit_rankings(request):
             movie2.save()
         except Movies.DoesNotExist:
             print("MovieID not found")
-        conn = sqlite3.connect(db_file)
-        cur = conn.cursor()
-        cur.execute("")
     return HttpResponse(None)
 
 
