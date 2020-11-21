@@ -18,6 +18,7 @@ from movie_smash import views
 
 urlpatterns = [
     url(r'^$', views.index),
+    url(r'^moviesmash/', views.moviesmash),
     url(r'^top100/', views.top100),
     url(r'^edit_rankings/', views.edit_rankings),
 ]

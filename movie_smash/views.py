@@ -1,14 +1,10 @@
 import csv
 import math
-import sqlite3
-
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from .models import Movies
 import random
-
-db_file = 'C:/Users/Frankie/PycharmProjects/Django-Website/db.sqlite3'
 
 def top100(request):
     query_results = Movies.objects.all().order_by('-elo')
@@ -47,14 +43,14 @@ def edit_rankings(request):
     return HttpResponse(None)
 
 
-def index(request):
+def moviesmash(request):
     # Parsing movies from CSV
     # with open('./movies.csv', 'r') as file:
     #     reader = csv.reader(file)
     #     for row in reader:
     #         m = Movies(movieID=row[1], title=row[2], release_date=row[0], popularity=0)
     #         m.save()
-    # return render(request, 'index.html')
+    # return render(request, 'movie_smash.html')
 
     # Display movies on the index page
     query_results = Movies.objects.all()
@@ -65,4 +61,7 @@ def index(request):
         r2 = random.randint(1, 100)
     m1 = query_results[r1-1]
     m2 = query_results[r2-1]
-    return render(request, 'index.html', {'m1': m1, 'm2': m2})
+    return render(request, 'movie_smash.html', {'m1': m1, 'm2': m2})
+
+def index(request):
+    return render(request, 'index.html')

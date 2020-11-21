@@ -25,7 +25,7 @@ SECRET_KEY = '1q0fb98yerhj5u-5v631z*)vw#7i45ewznz9ytpftk6*d$7@ul'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['167.172.49.69', 'fcprojects.uk', 'localhost']
+ALLOWED_HOSTS = ['167.172.49.69', 'fcprojects.uk','www.fcprojects.uk', '127.0.0.1']
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'movie_smash/../db.sqlite3'),
     }
 }
 
