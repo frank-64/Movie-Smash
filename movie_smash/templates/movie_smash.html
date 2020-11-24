@@ -40,8 +40,8 @@
     <a href="top100">Rankings</a>
 </div>
     <div class="container-fluid">
-    <div class="row" align="center" style="padding-top: 50px">
-		<div class="col-md-4 col-sm-5 col-xs-5">
+    <div class="row" align="center" style="padding-top: 20px">
+		<div class="col-md-5 col-sm-12 col-xs-12">
             <img class="img-responsive image1" src="{{ m1.image_url }}" style="height: auto; width: 60%"
                  id="{{ m1.movieID }}" name="{{ m2.movieID }}" onclick="movieSelected(id, name)" onmouseover="enlarge(id)" onmouseout="shrink(id)">
             <ul style="list-style-type: none;padding-left: 0; padding-top: 15px;font-size: 1.5vw">
@@ -49,12 +49,12 @@
                 <li>{{ m1.release_year }}</li>
             </ul>
         </div>
-		<div class="col-md-4 col-sm-2 col-xs-2">
-            <h1 style="font-size: 3vw; font-weight: bold; padding-top: 50px; padding-bottom: 50px">OR</h1>
-            <br>
-            <br>
+		<div class="col-md-2 col-sm-12 col-xs-12">
+            <div  class="container-fluid">
+                <h1 style="font-size: 3vw; font-weight: bold; padding-top: 50px; padding-bottom: 50px">OR</h1>
+            </div>
 		</div>
-		<div class="col-md-4 col-sm-5 col-xs-5" >
+		<div class="col-md-5 col-sm-12 col-xs-12" >
             <img class="img-responsive" src="{{ m2.image_url }}" style="height: auto; width: 60%"
                  id="{{ m2.movieID }}" name="{{ m1.movieID }}" onclick="movieSelected(id, name)" onmouseover="enlarge(id)" onmouseout="shrink(id)">
             <ul style="list-style-type: none; padding-left: 0; padding-top: 15px; font-size: 1.5vw">

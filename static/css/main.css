@@ -37,10 +37,6 @@ i{
   color: black;
 }
 
-.paneli{
-  margin-left: 30px;
-}
-
 body{
   background: white;
 }
@@ -54,31 +50,10 @@ body{
   background: #89c2d9;
 }
 
-.panel-default{
-  display: block;
-  box-shadow: 5px 5px 2px #61a5c2;
-}
-
 .panel-heading{
   color: #fffccf;
 }
 
 body{
   background: #61a5c2;
-}
-
-[data-toggle="collapse"] .fa:before {
-  content: "\f077";
-}
-
-[data-toggle="collapse"].collapsed .fa:before {
-  content: "\f078";
-}
-
-.list-group{
-  text-align: left;
-}
-
-.btn{
-  margin-bottom: 20px;
 }

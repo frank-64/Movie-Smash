@@ -3,52 +3,127 @@
 <head>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Frankie's Projects</title>
 </head>
+
+
 <body>
-<div class="container-fluid">
-  <div>
-    <h1>Frankie Clipsham</h1>
-    <p>Projects Portfolio </p>
-    <div class="icons">
-        <a href="https://github.com/RnJhbmsEquals">
-            <i class="fa fa-2x fa-github" style="color: black"></i>
-        </a>
-        <a href="mailto:fclipsham@gmail.com">
-            <i class="fa fa-2x fa-envelope-square" style="color: black"></i>
-        </a>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <p class="navbar-brand">
+          Projects Portfolio
+      </p>
     </div>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://www.linkedin.com/in/frankie-clipsham-355918149/" data-toggle="tooltip" title="LinkedIn"><i class="fa fa-2x fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/RnJhbmsEquals" data-toggle="tooltip" title="GitHub"><i class="fa fa-2x fa-github"></i></a></li>
+        <li><a href="mailto:fclipsham@gmail.com" data-toggle="tooltip" title="Email"><i class="fa fa-2x fa-envelope-square"></i></a></li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron">
+  <div class="container text-center">
+      <h1>Frankie Clipsham</h1>
+      <p>Hi, I'm Frankie, a second-year Computer Science student at Newcastle University.
+          My most confident programming languages being Java and Python with good experience in HTML, JavaScript and CSS.
+      </p>
   </div>
 </div>
 
-<div class="container-fluid c1">
-    <div class="row" style="padding-top: 50px">
-		<div class="col-md-4 col-sm-4 col-xs-4">
-            <div class="card">
-                <h6>Django Movie Ranking App</h6>
-                <p>Movie ranking app based on Mark Zuckerberg's Face Smash</p>
-                <a href="movie_smash.html">Website Link</a>
-                <a href="https://github.com/RnJhbmsEquals/Django-Website">GitHub repo</a>
-            </div>
-        </div>
-		<div class="col-md-4 col-sm-4 col-xs-4">
-            <div class="card">
-                <h6>Vending Machine Java Applet</h6>
-                <p>GUI Vending Machine where you can select items, view the stock, view your total and have correct change calculated.</p>
-                <a href="https://github.com/RnJhbmsEquals/VendingMachine">GitHub repo</a>
-            </div>
-		</div>
-		<div class="col-md-4 col-sm-4 col-xs-4" >
-            <div class="card">
-                <h6>Child Minding Website</h6>
-                <p>This project was for my A-Level coursework and I designed a website for my client who was a child minder.</p>
-                <a href="http://fclipsham.rscomputing.org.uk/">Website Link</a>
-            </div>
-        </div>
-		</div>
+<div class="c1 container-fluid bg-3 text-center">
+  <h3>My projects I've been working on outside of University.</h3><br>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3>Django Movie Ranking App<a data-toggle="collapse" href="#smash_panel" title="Read More" aria-controls="smash_panel"><i class="paneli fa fa-chevron-down" aria-hidden="true"></i></a></h3>
+          </div>
+          <div id="smash_panel" class="collapse">
+              <div class="panel-body">
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-info" role="progressbar" style="width:30%">
+                        HTML & CSS
+                      </div>
+                      <div class="progress-bar progress-bar-danger" role="progressbar" style="width:60%">
+                        Python
+                      </div>
+                      <div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%">
+                        JS
+                      </div>
+                  </div>
+                  <p>Movie ranking app based on Mark Zuckerberg's Face Smash</p>
+                  <a href="moviesmash">Website Link</a>
+                  <a href="https://github.com/RnJhbmsEquals/Django-Website">GitHub repo</a>
+                      <button data-toggle="collapse" data-target="#smash_div">View Example</button>
+                  <div id="smash_div" class="collapse">
+                      <img class="img-responsive rounded" src="mov.png">
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
-</div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3>Vending Machine Applet<a data-toggle="collapse" href="#java_panel" title="Read More" aria-controls="java_panel"><i class="paneli fa fa-chevron-down" aria-hidden="true"></i></a></h3>
+          </div>
+          <div id="java_panel" class="collapse">
+              <div class="panel-body">
+                  <div class="progress">
+                      <div class="progress-bar progress-bar" role="progressbar" style="width:100%">
+                        Java
+                      </div>
+                  </div>
+                  <p>GUI Vending Machine where you can select items, view the stock, view your total and have correct change calculated.</p>
+                  <a href="https://github.com/RnJhbmsEquals/VendingMachine">GitHub repo</a>
+
+                  <button data-toggle="collapse" data-target="#java_div">View Example</button>
+                  <div id="java_div" class="collapse">
+                    <img class="img-responsive rounded" src="GUI.png">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3>Child Minding Website<a data-toggle="collapse" href="#child_mind_panel" title="Read More" aria-controls="child_mind_panel"><i class="paneli fa fa-chevron-down" aria-hidden="true"></i></a></h3>
+          </div>
+          <div id="child_mind_panel" class="collapse">
+              <div class="panel-body">
+                  <div class="progress">
+                      <div class="progress-bar progress-bar-info" role="progressbar" style="width:50%">
+                        HTML & CSS
+                      </div>
+                      <div class="progress-bar progress-bar-warning" role="progressbar" style="width:25%">
+                        JavaScript
+                      </div>
+                      <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">
+                        PHP
+                      </div>
+                  </div>
+
+                  <p>This project was for my A-Level coursework and I designed a website for my client who was a child minder.</p>
+                  <ul class="list-group">
+                      <li class="list-group-item"><a href="https://github.com/RnJhbmsEquals/Child-Minding-Website" data-toggle="tooltip" title="GitHub"><i class="fa fa-2x fa-github"></i>GitHub Repository</a></li>
+                      <li class="list-group-item"><a href="http://fclipsham.rscomputing.org.uk/" data-toggle="tooltip" title="Project website"><i class="fa fa-2x fa-globe"></i>Live Website</a></li>
+                    </ul>
+
+                      <button class="btn" data-toggle="collapse" data-target="#child_minding_div">View Example</button>
+                  <div id="child_minding_div" class="collapse">
+                      <img class="img-responsive rounded" src="child_minding.png">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>
