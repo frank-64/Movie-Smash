@@ -3,7 +3,7 @@
 ## What is Movie Smash?
 Movie smash is a movie comparison web app which analyses the overall choices of the users to find the collective movie rankings.
 The concept is based on Mark Zuckerberg's Face Smash which was designed to choose between two women based on their attractiveness.
-However, in our Movie Smash users pick which movie between two they prefer which influences each movie's ranking (or elo) which allows the movies to be ranked.
+However, in our Movie Smash users pick which movie they prefer which influences each movie's ranking (or elo) which allows the movies to be ranked.
 
 ## What I set out to do
 * What I wanted to get out of this project:
