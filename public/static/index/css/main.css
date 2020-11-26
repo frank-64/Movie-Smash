@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+  color: black;
+}
+
+a{
+  color: black;
+}
+
+p, body {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+h3{
+  font-weight: bold;
+}
+
+.navbar{
+  background-color: #ffffff;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.nav > li > a:hover{
+    background-color:#F5F5F5;
+}
+
+.navbar-nav>li{
+  float: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.navbar-brand{
+  font-family: 'Raleway', sans-serif;
+  color: black;
+}
+
+i{
+  font-size: 2.3rem
+}
+
+.paneli{
+  margin-left: 30px;
+}
+
+.listi{
+  margin-right: 10px;
+}
+
+.progress_skills{
+  margin-bottom: 0;
+  height: 10px;
+}
+
+.about p,ul{
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+
+body{
+  background: white;
+}
+
+.j1{
+  background: #a1d2e3;
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  }
+
+.j2{
+  background: #a1d2e3;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+
+.jumbopanel{
+  background: #FFFFFF;
+  box-shadow: 5px 5px 2px #61a5c2;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#progressBar {
+  width: 100%;
+  background-color: grey;
+  border-radius: 5px
+}
+
+.list-group-item{
+  border: 1px solid #ffffff
+}
+
+.innerBar {
+  height: 10px;
+  background-color: #61a5c2;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+}
+
+#javaBar{
+  width: 90%;
+}
+
+#pyBar{
+  width: 80%;
+}
+#htmlBar{
+  width: 70%;
+}
+#jsBar{
+  width: 60%;
+}
+
+.c1{
+  background: #89c2d9;
+}
+
+.panel-default{
+  display: block;
+  box-shadow: 5px 5px 2px #61a5c2;
+}
+
+.panel-heading{
+  color: #fffccf;
+}
+
+body{
+  background: #61a5c2;
+}
+
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f077";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f078";
+}
+
+.list-group{
+  text-align: left;
+}
+
+.btn{
+  margin-bottom: 20px;
+}
+
+
+.img-me{
+  max-width: 125px;
+  min-width: 80px;
+  width: 100%;
+}
