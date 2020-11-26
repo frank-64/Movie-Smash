@@ -58,6 +58,7 @@ i{
 
 .about p{
   font-size: 15px;
+  margin-bottom: 0;
 }
 
 body{
@@ -156,6 +157,7 @@ body{
 
 
 .img-responsive{
-  max-width: 250px;
+  max-width: 125px;
+  min-width: 80px;
   width: 100%;
 }
