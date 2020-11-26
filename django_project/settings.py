@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1q0fb98yerhj5u-5v631z*)vw#7i45ewznz9ytpftk6*d$7@ul'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['167.172.49.69', 'fcprojects.uk','www.fcprojects.uk', '127.0.0.1']
 
@@ -119,5 +119,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = '/home/frank/Django-Website/public/static'
-STATIC_URL = '/static/'
+STATIC_URL = '/public/static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),
+  #'/var/www/static/',
+]
+print(STATICFILES_DIRS)
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "public\static")
+print(STATIC_ROOT)

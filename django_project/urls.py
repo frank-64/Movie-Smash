@@ -24,4 +24,4 @@ urlpatterns = [
     url(r'^moviesmash/', views.moviesmash),
     url(r'^rankings/', views.top100),
     url(r'^edit_rankings/', views.edit_rankings),
-]+static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
