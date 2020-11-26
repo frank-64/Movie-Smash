@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from movie_smash import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^moviesmash/', views.moviesmash),
-    url(r'^top100/', views.top100),
+    url(r'^rankings/', views.top100),
     url(r'^edit_rankings/', views.edit_rankings),
-]
+]+static(settings.STATIC_URL, document_root=settings.STATIC_URL)
