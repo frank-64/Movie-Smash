@@ -121,10 +121,10 @@ USE_TZ = True
 
 STATIC_URL = '/public/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "/public/static"),
   #'/var/www/static/',
 ]
 print(STATICFILES_DIRS)
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "public\static")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "Django-Website/public/static")
 print(STATIC_ROOT)
