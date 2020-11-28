@@ -1,4 +1,8 @@
-# Movie Smash - Django web application
+#Django web application
+
+## The Website
+This Django web app now includes my website contains my project portfolio. The website is hosted using DigitalOcean with a Ubuntu virtual machine.
+I used Nginx and Gunicorn together, Nginx is the web server, it decides where requests go and sends HTTP requests through reverse proxy for Gunicorn to handle and serves static files itself.
 
 ## What is Movie Smash?
 Movie smash is a movie comparison web app which analyses the overall choices of the users to find the collective movie rankings.
