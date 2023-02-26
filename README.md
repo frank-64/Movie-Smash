@@ -1,4 +1,4 @@
-#Movie Smash Django web application
+# Movie Smash Django web application
 
 ## The Website
 This Django web app now includes my website contains my project portfolio. The website is hosted using DigitalOcean with a Ubuntu virtual machine.
